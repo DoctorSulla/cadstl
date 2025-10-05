@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { photos = [] } = $props();
+	let { photos = [], autoplay = true } = $props();
 
 	let currentPhoto = $state(0);
 	let numberOfPhotos = $derived(photos.length);
@@ -19,6 +19,10 @@
 		} else {
 			currentPhoto = numberOfPhotos - 1;
 		}
+	}
+
+	if (autoplay) {
+		setInterval(increment, 8000);
 	}
 </script>
 

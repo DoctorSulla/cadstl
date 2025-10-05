@@ -1,4 +1,4 @@
-<h1 class="m-auto mt-4 text-center text-4xl text-blue-600">
+<h1 class="mukta-regular m-auto mt-4 text-center text-4xl text-blue-600">
 	Chester and District Summer Tennis League
 </h1>
 
