@@ -2,7 +2,7 @@
 	let { name, role, email, homePhone, mobilePhone } = $props();
 </script>
 
-<div class="m-3 h-44 w-5/12 rounded-2xl border border-gray-300 p-2 shadow-lg shadow-blue-300">
+<div class="m-3 h-44 w-lg rounded-2xl border border-gray-300 p-2 shadow-lg shadow-blue-300">
 	<div class="text-center text-xl font-bold">{role} - {name} <i class="fa-solid fa-user"></i></div>
 
 	{#if email}
