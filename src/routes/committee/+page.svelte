@@ -13,43 +13,42 @@
 			name: 'John Simpson',
 			role: 'Chairman',
 			email: 'simpsonshome@ntlworld.com',
-			homePhone: '01513439052',
+			homePhone: '0151 3439052',
 			mobilePhone: '07432535479'
 		},
 		{
-			name: 'John Simpson',
-			role: 'Chairman',
-			email: 'simpsonshome@ntlworld.com',
-			homePhone: '01513439052',
-			mobilePhone: '07432535479'
+			name: 'Kate Goldthorpe',
+			role: 'Secretary',
+			email: 'kmgoldthorpe@gmail.com',
+			homePhone: '01244 336479',
+			mobilePhone: '07598284987'
 		},
 		{
-			name: 'John Simpson',
-			role: 'Chairman',
-			email: 'simpsonshome@ntlworld.com',
-			homePhone: '01513439052',
-			mobilePhone: '07432535479'
+			name: 'Joan Lythgoe',
+			role: 'Treasurer',
+			email: 'joanlythgoe45@hotmail.com',
+			homePhone: '01829 803977',
+			mobilePhone: '07752722630'
 		},
 		{
-			name: 'John Simpson',
-			role: 'Chairman',
-			email: 'simpsonshome@ntlworld.com',
-			homePhone: '01513439052',
-			mobilePhone: '07432535479'
+			name: 'Sue Long',
+			role: 'Ladies League Rep',
+			email: 'suelong@hotmail.co.uk',
+			homePhone: '',
+			mobilePhone: '07846698264'
 		},
 		{
-			name: 'John Simpson',
-			role: 'Chairman',
-			email: 'simpsonshome@ntlworld.com',
-			homePhone: '01513439052',
-			mobilePhone: '07432535479'
+			name: 'Pam Kloezeman',
+			role: 'Mixed League Rep',
+			email: 'pamkloezeman@gmail.com',
+			homePhone: '',
+			mobilePhone: '07802296266'
 		},
 		{
-			name: 'John Simpson',
-			role: 'Chairman',
-			email: 'simpsonshome@ntlworld.com',
-			homePhone: '01513439052',
-			mobilePhone: '07432535479'
+			name: 'Alan Hewitt',
+			role: 'Mens League Rep',
+			email: 'eah6644@yahoo.com',
+			mobilePhone: ''
 		}
 	];
 </script>

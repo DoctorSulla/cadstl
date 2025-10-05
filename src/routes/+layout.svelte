@@ -7,12 +7,13 @@
 
 	const routes = {
 		'/': 'Home',
-		'/history': 'History',
+		'/scorecards': 'Scorecards',
 		'/rules': 'Rules',
+		'/committee': 'Committee',
 		'/photos': 'Photos',
 		'/results': 'Results',
-		'/committee': 'Committee',
-		'/scorecards': 'Scorecards'
+		'/previouswinners': 'Previous Winners',
+		'/history': 'History'
 	};
 
 	let title = $derived.by(() => {
@@ -34,12 +35,13 @@
 	{/each}
 </nav>
 
-<div class="m-auto my-4 w-fit rounded-2xl bg-red-400 p-4 text-red-900">
-	This website is currently under construction.
-</div>
+<!-- <div class="m-auto my-4 w-fit rounded-2xl bg-red-400 p-4 text-red-900"> -->
+<!-- 	This website is currently under construction. -->
+<!-- </div> -->
+
 <main class="m-auto max-w-5xl px-2">
 	{#if page.route.id && page.route.id != '/'}
-		<h1 class="mt-2 text-2xl">{title}</h1>
+		<h1 class="mt-2 text-center text-3xl text-blue-500">{title}</h1>
 	{/if}
 	{@render children?.()}
 </main>
