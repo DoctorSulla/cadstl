@@ -36,7 +36,7 @@
 	<title>{title}</title>
 </svelte:head>
 
-<nav class="bg-blue-900 py-3">
+<nav class="flex flex-wrap bg-blue-900 py-3">
 	{#each Object.entries(routes) as [key, value]}
 		<a class="oswald-regular mx-2 text-lg text-yellow-400 hover:underline" href={key}>{value}</a>
 	{/each}
