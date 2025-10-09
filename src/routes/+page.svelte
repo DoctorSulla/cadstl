@@ -33,7 +33,7 @@
 	Chester and District Summer Tennis League
 </h1>
 
-<p class="my-5 text-2xl">
+<p class="my-5 text-xl">
 	Welcome to the CADSTL website. As the name would suggest, we are a Chester based tennis league but
 	have teams across the Wirral as well as a few in North Wales. If you are interested in joining the
 	league please fill out a <a
@@ -42,7 +42,7 @@
 	>.
 </p>
 
-<p class="my-5 text-2xl">
+<p class="my-5 text-xl">
 	This website has all the latest information concerning the 2025 season, including:
 </p>
 <ul class="mt-2 mb-10 list-disc text-xl">

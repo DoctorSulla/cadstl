@@ -13,7 +13,7 @@
 		'/committee': 'Committee',
 		'/photos': 'Photos',
 		'/agmminutes': 'AGM Minutes',
-		'/results': 'Results',
+		'/leaguetables': 'League Tables',
 		'/previouswinners': 'Previous Winners',
 		'/history': 'History'
 	};
