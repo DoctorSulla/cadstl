@@ -21,6 +21,12 @@
 		let value = page.route.id ? routes[page.route.id] : 'CADSTL';
 		return value;
 	});
+
+	let expanded = $state(false);
+
+	function toggle() {
+		expanded = !expanded;
+	}
 </script>
 
 <svelte:head>
@@ -36,10 +42,19 @@
 	<title>{title}</title>
 </svelte:head>
 
-<nav class="flex flex-wrap bg-blue-900 py-3">
-	{#each Object.entries(routes) as [key, value]}
-		<a class="oswald-regular mx-2 text-lg text-yellow-400 hover:underline" href={key}>{value}</a>
-	{/each}
+<nav class="bg-blue-900 py-3">
+	<button class="md:hidden" onclick={toggle} aria-label="Toggle menu">
+		<i class="fa-solid fa-bars mx-2 cursor-pointer text-3xl text-yellow-400"></i>
+	</button>
+	<div
+		class="{expanded
+			? 'flex flex-col'
+			: 'hidden flex-col'} flex-wrap bg-blue-900 md:flex md:flex-row"
+	>
+		{#each Object.entries(routes) as [key, value]}
+			<a class="oswald-regular mx-2 text-lg text-yellow-400 hover:underline" href={key}>{value}</a>
+		{/each}
+	</div>
 </nav>
 
 <!-- <div class="m-auto my-4 w-fit rounded-2xl bg-red-400 p-4 text-red-900"> -->
