@@ -4,8 +4,8 @@
 		name: string;
 		role: string;
 		email: string;
-		homePhone: string;
-		mobilePhone: string;
+		homePhone?: string;
+		mobilePhone?: string;
 	}
 
 	const members: Contact[] = [

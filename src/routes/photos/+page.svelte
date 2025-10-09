@@ -12,6 +12,12 @@
 	];
 </script>
 
+<svelte:head>
+	{#each photos as photo}
+		<link rel="preload" as="image" href={photo.src} />
+	{/each}
+</svelte:head>
+
 <div class="mt-2">
 	<PhotoCarousel {photos} />
 </div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { name, role, email, homePhone, mobilePhone } = $props();
+	let { name, role, email = '', homePhone = '', mobilePhone = '' } = $props();
 </script>
 
 <div class="m-3 h-44 w-lg rounded-2xl border border-gray-300 p-2 shadow-lg shadow-blue-300">
