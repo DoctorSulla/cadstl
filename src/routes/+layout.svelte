@@ -45,9 +45,9 @@
 	<title>{title}</title>
 </svelte:head>
 
-<nav class="bg-blue-900 py-3">
+<nav class="bg-blue-900 py-4">
 	<button class="md:hidden" onclick={toggle} aria-label="Toggle menu">
-		<i class="fa-solid fa-bars mx-2 cursor-pointer text-3xl text-yellow-400"></i>
+		<i class="fa-solid fa-bars mx-2 cursor-pointer text-4xl text-yellow-400"></i>
 	</button>
 	<div
 		class="{expanded
@@ -55,7 +55,7 @@
 			: 'hidden flex-col'} flex-wrap bg-blue-900 md:flex md:flex-row"
 	>
 		{#each Object.entries(routes) as [key, value]}
-			<a class="oswald-regular mx-2 text-lg text-yellow-400 hover:underline" href={key}>{value}</a>
+			<a class="oswald-regular mx-2 text-xl text-yellow-400 hover:underline" href={key}>{value}</a>
 		{/each}
 	</div>
 </nav>
