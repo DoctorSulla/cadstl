@@ -37,6 +37,18 @@
 			});
 
 			for (let location of locations) {
+				/*let dot = document.createElement('div');
+				dot.style.width = '15px';
+				dot.style.height = '15px';
+				dot.style.backgroundColor = 'red';
+				dot.style.borderRadius = '100%';
+				dot.style.border = '1px solid black';
+				let label = document.createElement('div');
+				label.style.textAlign = 'center';
+				label.style.fontWeight = 'bold';
+				label.appendChild(dot);
+				label.innerHTML += location.title; */
+
 				new google.maps.marker.AdvancedMarkerElement({
 					map,
 					position: location.position,
