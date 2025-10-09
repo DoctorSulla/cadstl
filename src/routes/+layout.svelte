@@ -2,6 +2,7 @@
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.png';
 	import { page } from '$app/state';
+	import { beforeNavigate } from '$app/navigation';
 
 	let { children } = $props();
 
@@ -27,6 +28,8 @@
 	function toggle() {
 		expanded = !expanded;
 	}
+
+	beforeNavigate(() => (expanded = false));
 </script>
 
 <svelte:head>
