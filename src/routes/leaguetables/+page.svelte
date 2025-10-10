@@ -57,9 +57,9 @@
 		<option value="vets">Veterans</option>
 	</select>
 	<select class="border border-blue-300" onchange={getLeagueTable} bind:value={division}>
-		<option value="1">League 1</option>
-		<option value="2">League 2</option>
-		<option value="3">League 3</option>
+		<option value="1">Division 1</option>
+		<option value="2">Division 2</option>
+		<option value="3">Division 3</option>
 	</select>
 </form>
 
