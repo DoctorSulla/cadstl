@@ -35,5 +35,8 @@
 		"onlyBuiltDependencies": [
 			"esbuild"
 		]
+	},
+	"dependencies": {
+		"resend": "^6.1.2"
 	}
 }
