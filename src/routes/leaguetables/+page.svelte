@@ -1,12 +1,25 @@
 <script>
+	import LoadingSpinner from '$lib/LoadingSpinner.svelte';
+
 	let leagueType = $state('mens');
 	let division = $state('1');
 	let response = $state(null);
 
+	let loading = $state(false);
+
+	/*let leagues = {
+		mens: [1, 2, 3],
+		ladies: [1, 2, 3],
+		mixed: [1, 2, 3],
+		vets: [1]
+	};*/
+
 	async function getLeagueTable() {
+		loading = true;
 		let url = `https://api.cadstl.com/${leagueType}/${division}`;
 		let request = await fetch(url);
 		response = await request.json();
+		loading = false;
 	}
 
 	getLeagueTable();
@@ -26,7 +39,8 @@
 	</select>
 </form>
 
-{#if response}
+<LoadingSpinner {loading} />
+{#if response && !loading}
 	<table class="mt-4">
 		<thead>
 			<tr>
@@ -36,8 +50,8 @@
 			</tr>
 		</thead>
 		<tbody>
-			{#each response.rows as row}
-				<tr>
+			{#each response.rows as row, index}
+				<tr class={index % 2 == 0 ? 'bg-yellow-100' : 'bg-blue-100'}>
 					{#each Object.values(row) as col}
 						<td class="border border-black p-2">{col}</td>
 					{/each}
