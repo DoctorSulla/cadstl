@@ -57,7 +57,7 @@
 	>
 		{#each Object.entries(routes) as [key, value]}
 			<a
-				class="oswald-regular my-2 text-xl text-yellow-400 hover:underline md:mx-2 md:my-0"
+				class="oswald-regular mx-2 my-2 text-xl text-yellow-400 hover:underline md:mx-2 md:my-0"
 				href={key}>{value}</a
 			>
 		{/each}
