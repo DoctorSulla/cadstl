@@ -55,7 +55,10 @@
 			: 'hidden flex-col'} flex-wrap bg-blue-900 md:flex md:flex-row"
 	>
 		{#each Object.entries(routes) as [key, value]}
-			<a class="oswald-regular mx-2 text-xl text-yellow-400 hover:underline" href={key}>{value}</a>
+			<a
+				class="oswald-regular my-2 text-xl text-yellow-400 hover:underline md:mx-2 md:my-0"
+				href={key}>{value}</a
+			>
 		{/each}
 	</div>
 </nav>

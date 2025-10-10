@@ -49,6 +49,14 @@
 	}
 </script>
 
+<p class="my-2">
+	Below are the league tables for the current season. Our full fixtures and league tables can be
+	found at <a
+		class="text-blue-500 underline"
+		href="https://bowlsresults.co.uk/resultstennis/chestertennis/index.php">Bowls Results</a
+	>.
+</p>
+
 <form>
 	<select class="border border-blue-300" onchange={getLeagueTable} bind:value={leagueType}>
 		<option value="mens">Mens</option>
