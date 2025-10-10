@@ -1,9 +1,25 @@
-<script>
+<script lang="ts">
 	import LoadingSpinner from '$lib/LoadingSpinner.svelte';
+
+	interface LeagueTable {
+		headings: string[];
+		rows: TeamRow[];
+	}
+
+	interface TeamRow {
+		team: string;
+		played: string;
+		won: string;
+		lost: string;
+		sets_won: string;
+		sets_lost: string;
+		points: string;
+		deductions: string;
+	}
 
 	let leagueType = $state('mens');
 	let division = $state('1');
-	let response = $state(null);
+	let response: LeagueTable | null = $state(null);
 
 	let loading = $state(false);
 
@@ -23,6 +39,14 @@
 	}
 
 	getLeagueTable();
+
+	function getMobileHeadings(headings: string[]): string[] {
+		return headings.map((v) => {
+			let parts = v.split(' ');
+			let firstLetters = parts.map((words) => words.substring(0, 1)).join('');
+			return firstLetters;
+		});
+	}
 </script>
 
 <form>
@@ -44,14 +68,22 @@
 	<table class="mt-4">
 		<thead>
 			<tr>
+				{#each getMobileHeadings(response.headings) as heading}
+					<th class="table-cell border border-black bg-blue-900 p-2 font-bold text-white md:hidden"
+						>{heading}</th
+					>
+				{/each}
+
 				{#each response.headings as heading}
-					<th class="border border-black bg-gray-300 p-2 font-bold">{heading}</th>
+					<th class="hidden border border-black bg-blue-900 p-2 font-bold text-white md:table-cell"
+						>{heading}</th
+					>
 				{/each}
 			</tr>
 		</thead>
 		<tbody>
 			{#each response.rows as row, index}
-				<tr class={index % 2 == 0 ? 'bg-yellow-100' : 'bg-blue-100'}>
+				<tr class={index % 2 == 0 ? '' : 'bg-blue-100'}>
 					{#each Object.values(row) as col}
 						<td class="border border-black p-2">{col}</td>
 					{/each}
