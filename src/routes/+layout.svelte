@@ -3,6 +3,8 @@
 	import favicon from '$lib/assets/favicon.png';
 	import { page } from '$app/state';
 	import { beforeNavigate } from '$app/navigation';
+	import { slide } from 'svelte/transition';
+	import { quadOut, quadIn } from 'svelte/easing';
 
 	let { children } = $props();
 
@@ -47,18 +49,29 @@
 </svelte:head>
 
 <nav class="bg-blue-900 py-4">
-	<button class="md:hidden" onclick={toggle} aria-label="Toggle menu">
-		<i class="fa-solid fa-bars mx-2 cursor-pointer text-4xl text-yellow-400"></i>
-	</button>
-	<div
-		class="{expanded
-			? 'flex flex-col'
-			: 'hidden flex-col'} flex-wrap bg-blue-900 md:flex md:flex-row"
-	>
+	<div class="mobile md:hidden">
+		<button class="md:hidden" onclick={toggle} aria-label="Toggle menu">
+			<i class="fa-solid fa-bars mx-2 cursor-pointer text-4xl text-yellow-400"></i>
+		</button>
+
+		{#if expanded}
+			<div
+				transition:slide={{ axis: 'y', duration: 400, easing: quadOut }}
+				class="flex-wrap bg-blue-900 md:flex md:flex-row"
+			>
+				{#each Object.entries(routes) as [key, value]}
+					<a
+						class="oswald-regular mx-2 my-2 block text-xl text-yellow-400 hover:underline"
+						href={key}>{value}</a
+					>
+				{/each}
+			</div>
+		{/if}
+	</div>
+	<div class="non-mobile hidden flex-wrap md:flex">
 		{#each Object.entries(routes) as [key, value]}
-			<a
-				class="oswald-regular mx-2 my-2 text-xl text-yellow-400 hover:underline md:mx-2 md:my-0"
-				href={key}>{value}</a
+			<a class="oswald-regular mx-2 my-2 block text-xl text-yellow-400 hover:underline" href={key}
+				>{value}</a
 			>
 		{/each}
 	</div>
