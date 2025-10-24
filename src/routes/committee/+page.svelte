@@ -11,7 +11,7 @@
 	const members: Contact[] = [
 		{
 			name: 'John Simpson',
-			role: 'Chairman',
+			role: 'Chair',
 			email: 'simpsonshome@ntlworld.com',
 			homePhone: '0151 3439052',
 			mobilePhone: '07432535479'

@@ -1,6 +1,13 @@
-<p class="mt-2">
-	Scorecards for each league format are provided below in Excel format as well as a completed
-	example.
+<p class="my-2">
+	Results must be entered by the home captain on the online system (<a
+		class="text-blue-700 underline"
+		href="https://www.bowlsresults.co.uk/resultstennis/chestertennis/index.php">link</a
+	>) as soon as possible but within one week of the completion of the match.
+</p>
+
+<p class="my-2">
+	Captains are encouraged to keep a record of each match and scorecards for each league format are
+	provided below in excel format as well as a completed example.
 </p>
 <div class="mt-6 flex flex-wrap justify-evenly">
 	<a href="/scorecards/example_completed_scorecard.pdf">

@@ -35,7 +35,7 @@
 
 <p class="my-5 text-xl">
 	Welcome to the CADSTL website. As the name would suggest, we are a Chester based tennis league,
-	but have teams across the Wirral as well as a few in North Wales. If you are interested in joining
+	but have teams across the Wirral, North Wales, and Shropshire. If you are interested in joining
 	the league please fill out a <a
 		class="text-blue-700 underline hover:text-blue-900"
 		href="/cadstl_registration_form_2025.doc">registration form <i class="fas fa-file-word"></i></a

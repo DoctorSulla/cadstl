@@ -10,7 +10,7 @@
 
 	const routes = {
 		'/': 'Home',
-		'/scorecards': 'Scorecards',
+		'/results': 'Results',
 		'/rules': 'Rules',
 		'/committee': 'Committee',
 		'/photos': 'Photos',
