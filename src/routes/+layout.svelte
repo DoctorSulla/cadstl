@@ -56,7 +56,7 @@
 		{#if expanded}
 			<div
 				transition:slide={{ axis: 'y', duration: 400 }}
-				class="flex-wrap bg-blue-900 md:flex md:flex-row"
+				class="flex-wrap overflow-hidden bg-blue-900 md:flex md:flex-row"
 			>
 				{#each Object.entries(routes) as [key, value]}
 					<a
