@@ -4,7 +4,6 @@
 	import { page } from '$app/state';
 	import { beforeNavigate } from '$app/navigation';
 	import { slide } from 'svelte/transition';
-	import { quadOut, quadIn } from 'svelte/easing';
 
 	let { children } = $props();
 
@@ -56,7 +55,7 @@
 
 		{#if expanded}
 			<div
-				transition:slide={{ axis: 'y', duration: 400, easing: quadOut }}
+				transition:slide={{ axis: 'y', duration: 400 }}
 				class="flex-wrap bg-blue-900 md:flex md:flex-row"
 			>
 				{#each Object.entries(routes) as [key, value]}
