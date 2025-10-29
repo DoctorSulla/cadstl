@@ -4,7 +4,6 @@
 
 <div class="space-y-8">
 	<div>
-		<h1 class="mb-4 text-3xl font-bold">Previous League Winners</h1>
 		<p class="text-gray-600">
 			Select a category to view all division winners throughout the league history.
 		</p>
