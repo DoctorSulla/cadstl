@@ -17,7 +17,7 @@
 		</p>
 		<a
 			href="/winners-all.pdf"
-			class="inline-flex items-center gap-2 rounded bg-red-600 px-4 py-2 text-white hover:bg-red-700"
+			class="m-1 inline-flex items-center gap-2 rounded bg-red-600 px-4 py-2 text-white hover:bg-red-700"
 		>
 			<i class="fa-solid fa-file-pdf"></i>
 			Download Full PDF

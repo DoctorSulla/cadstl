@@ -65,22 +65,18 @@
 		{#each divisionOrder as division (division)}
 			<div class="overflow-x-auto" bind:this={sectionRefs[division]}>
 				<h3 class="mb-3 text-xl font-bold text-gray-800">{division}</h3>
-				<table class="w-full border-collapse border border-gray-300">
+				<table class="w-full border-collapse border border-black">
 					<thead>
-						<tr class="bg-gray-100">
-							<th class="border border-gray-300 px-4 py-2 text-left font-semibold">Year</th>
-							<th class="border border-gray-300 px-4 py-2 text-left font-semibold">Winner</th>
+						<tr class="bg-blue-900">
+							<th class="border border-black px-4 py-2 text-left font-bold text-white">Year</th>
+							<th class="border border-black px-4 py-2 text-left font-bold text-white">Winner</th>
 						</tr>
 					</thead>
 					<tbody>
 						{#each groupedByDivision[division] as entry, index (entry.year)}
-							<tr
-								class={index % 2 === 0
-									? 'bg-white hover:bg-blue-50'
-									: 'bg-gray-50 hover:bg-blue-50'}
-							>
-								<td class="border border-gray-300 px-4 py-2 font-medium">{entry.year}</td>
-								<td class="border border-gray-300 px-4 py-2">{entry.winner}</td>
+							<tr class={index % 2 === 0 ? 'bg-white' : 'bg-blue-100'}>
+								<td class="border border-black px-4 py-2 font-medium">{entry.year}</td>
+								<td class="border border-black px-4 py-2">{entry.winner}</td>
 							</tr>
 						{/each}
 					</tbody>

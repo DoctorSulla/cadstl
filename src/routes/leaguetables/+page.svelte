@@ -17,18 +17,43 @@
 		deductions: string;
 	}
 
+	interface Division {
+		id: number;
+		name: string;
+	}
+
+	interface Divisions {
+		mens: Division[];
+		ladies: Division[];
+		mixed: Division[];
+		vets: Division[];
+	}
+
+	let divisions: Divisions = {
+		mens: [
+			{ id: 1, name: 'Division 1' },
+			{ id: 2, name: 'Division 2' },
+			{ id: 3, name: 'Division 3' }
+		],
+		ladies: [
+			{ id: 1, name: 'Division 1' },
+			{ id: 2, name: 'Division 2' },
+			{ id: 3, name: 'Division 3' }
+		],
+		mixed: [
+			{ id: 1, name: 'Division 1' },
+			{ id: 2, name: 'Division 2' },
+			{ id: 3, name: 'Division 3' }
+		],
+		vets: [{ id: 1, name: 'Division 1' }]
+	};
+
 	let leagueType = $state('mens');
-	let division = $state('1');
+	let division = $state(1);
+	let availableDivisions = $derived(divisions[leagueType]);
 	let response: LeagueTable | null = $state(null);
 
-	let loading = $state(false);
-
-	/*let leagues = {
-		mens: [1, 2, 3],
-		ladies: [1, 2, 3],
-		mixed: [1, 2, 3],
-		vets: [1]
-	};*/
+	let loading = $state(true);
 
 	async function getLeagueTable() {
 		loading = true;
@@ -56,7 +81,6 @@
 		href="https://bowlsresults.co.uk/resultstennis/chestertennis/index.php">Bowls Results</a
 	>.
 </p>
-
 <form>
 	<select class="border border-blue-300" onchange={getLeagueTable} bind:value={leagueType}>
 		<option value="mens">Mens</option>
@@ -65,9 +89,9 @@
 		<option value="vets">Veterans</option>
 	</select>
 	<select class="border border-blue-300" onchange={getLeagueTable} bind:value={division}>
-		<option value="1">Division 1</option>
-		<option value="2">Division 2</option>
-		<option value="3">Division 3</option>
+		{#each availableDivisions as div}
+			<option value={div.id}>{div.name}</option>
+		{/each}
 	</select>
 </form>
 
