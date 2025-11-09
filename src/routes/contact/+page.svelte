@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { CONTACT_FORM_LIMITS } from '$lib/constants';
+	import Turnstile from '$lib/Turnstile.svelte';
 
 	type FormErrors = Partial<
 		Record<'fromName' | 'fromEmail' | 'emailSubject' | 'emailBody', string>
@@ -28,6 +29,17 @@
 	$: values = form.values ?? {};
 	$: successMessage = form.success ? (form.message ?? null) : null;
 	$: errorMessage = form.success === false ? (form.error ?? null) : null;
+	$: cfToken = '';
+	$: formDisabled = true;
+
+	function handleCloudflareToken(token: string) {
+		cfToken = token;
+		formDisabled = false;
+	}
+
+	function handleCloudflareTokenError(error: string) {
+		errorMessage = 'You failed the Cloudflare Turnstile check. Please refresh and try again';
+	}
 </script>
 
 <div class="mx-auto max-w-2xl p-6">
@@ -118,12 +130,16 @@
 				<p class="mt-2 text-sm text-red-600">{errors.emailBody}</p>
 			{/if}
 		</div>
+		<input type="hidden" name="cf-turnstile-token" value={cfToken} />
 
 		<button
 			type="submit"
-			class="oswald-regular w-full transform rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:scale-[0.98]"
+			class="oswald-regular w-full transform rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:scale-[0.98] disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-200"
+			disabled={formDisabled}
 		>
 			Send Enquiry
 		</button>
+
+		<Turnstile successCallback={handleCloudflareToken} errorCallback={handleCloudflareTokenError} />
 	</form>
 </div>
