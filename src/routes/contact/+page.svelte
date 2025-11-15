@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { enhance } from '$app/forms';
 	import { CONTACT_FORM_LIMITS } from '$lib/constants';
 	import Turnstile from '$lib/Turnstile.svelte';
 
@@ -53,7 +54,17 @@
 		</p>
 	{/if}
 
-	<form method="post" class="space-y-6 rounded-lg bg-white p-8 shadow-lg">
+	{#if errors.turnstileValidationError}
+		<p class="mb-6 rounded-lg border border-red-200 bg-red-50 p-4 text-center text-red-700">
+			{errors.turnstileValidationError}
+		</p>
+	{:else if Object.keys(errors).length > 0 && !errorMessage}
+		<p class="mb-6 rounded-lg border border-red-200 bg-red-50 p-4 text-center text-red-700">
+			Please correct the errors below and try again.
+		</p>
+	{/if}
+
+	<form method="post" use:enhance class="space-y-6 rounded-lg bg-white p-8 shadow-lg">
 		<div>
 			<label for="fromName" class="mukta-regular mb-2 block text-sm font-medium text-gray-700"
 				>Your Name</label
