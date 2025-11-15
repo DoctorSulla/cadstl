@@ -3,9 +3,13 @@
 	import { CONTACT_FORM_LIMITS } from '$lib/constants';
 	import Turnstile from '$lib/Turnstile.svelte';
 
-	type FormErrors = Partial<
-		Record<'fromName' | 'fromEmail' | 'emailSubject' | 'emailBody', string>
-	>;
+	type FieldNames =
+		| 'fromName'
+		| 'fromEmail'
+		| 'emailSubject'
+		| 'emailBody'
+		| 'turnstileValidationError';
+	type FormErrors = Partial<Record<FieldNames, string>>;
 	type FormValues = Partial<
 		Record<'fromName' | 'fromEmail' | 'emailSubject' | 'emailBody', string>
 	>;
@@ -17,21 +21,23 @@
 		values?: FormValues;
 	};
 
-	export let data: { form?: FormState };
+	export let form: FormState | undefined;
 
-	let form: FormState = data?.form ?? {};
-	let errors: FormErrors = form.errors ?? {};
-	let values: FormValues = form.values ?? {};
-	let successMessage: string | null = form.success ? (form.message ?? null) : null;
-	let errorMessage: string | null = form.success === false ? (form.error ?? null) : null;
+	let errors: FormErrors = form?.errors ?? {};
+	let values: FormValues = form?.values ?? {};
+	let successMessage: string | null = form?.success ? (form.message ?? null) : null;
+	let errorMessage: string | null = form?.success === false ? (form.error ?? null) : null;
+	let cfToken = '';
+	let formDisabled = true;
 
-	$: form = data?.form ?? {};
-	$: errors = form.errors ?? {};
-	$: values = form.values ?? {};
-	$: successMessage = form.success ? (form.message ?? null) : null;
-	$: errorMessage = form.success === false ? (form.error ?? null) : null;
-	$: cfToken = '';
-	$: formDisabled = true;
+	$: errors = form?.errors ?? {};
+	$: values = form?.values ?? {};
+	$: successMessage = form?.success ? (form.message ?? null) : null;
+	$: errorMessage = form?.success === false ? (form.error ?? null) : null;
+	$: if (form?.success) {
+		cfToken = '';
+		formDisabled = true;
+	}
 
 	function handleCloudflareToken(token: string) {
 		cfToken = token;
@@ -40,33 +46,7 @@
 
 	function handleCloudflareTokenError(error: string) {
 		errorMessage = 'You failed the Cloudflare Turnstile check. Please refresh and try again';
-	}
-
-	function handleFormSubmit() {
-		return async ({ result }: any) => {
-			if (result.type === 'failure' || result.type === 'error') {
-				// Update form state with errors
-				form = result.data || {};
-				errors = form.errors ?? {};
-				values = form.values ?? {};
-				errorMessage = form.success === false ? (form.error ?? null) : null;
-				successMessage = null;
-			} else if (result.type === 'success') {
-				// Handle success
-				form = result.data || {};
-				successMessage = form.message ?? null;
-				errorMessage = null;
-				errors = {};
-				values = {};
-				// Reset form after success
-				setTimeout(() => {
-					const formElement = document.querySelector('form');
-					if (formElement) formElement.reset();
-					cfToken = '';
-					formDisabled = true;
-				}, 0);
-			}
-		};
+		formDisabled = true;
 	}
 </script>
 
@@ -91,11 +71,7 @@
 		</p>
 	{/if}
 
-	<form
-		method="post"
-		use:enhance={handleFormSubmit()}
-		class="space-y-6 rounded-lg bg-white p-8 shadow-lg"
-	>
+	<form method="post" use:enhance class="space-y-6 rounded-lg bg-white p-8 shadow-lg">
 		<div>
 			<label for="fromName" class="mukta-regular mb-2 block text-sm font-medium text-gray-700"
 				>Your Name</label

@@ -25,19 +25,19 @@ const isValidEmail = (value: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
 const containsLineBreak = (value: string) => /[\r\n]/.test(value);
 
 export const actions = {
-	default: async ({ request, platform }) => {
-
+	default: async ({ request, platform, getClientAddress }) => {
 		const formData = await request.formData();
 
 		const fromName = (formData.get('fromName') ?? '').toString().trim();
 		const fromEmail = (formData.get('fromEmail') ?? '').toString().trim();
 		const rawSubject = (formData.get('emailSubject') ?? '').toString().trim();
 		const rawBody = (formData.get('emailBody') ?? '').toString().trim();
+		const turnstileToken = (formData.get('cf-turnstile-token') ?? '').toString().trim();
 
 		const errors: Record<string, string> = {};
 
 		if (!platform) {
-			errors.platform = "Unexpected environment error";
+			errors.platform = 'Unexpected environment error';
 			return fail(500, {
 				success: false,
 				errors,
@@ -50,6 +50,35 @@ export const actions = {
 			});
 		}
 
+		const TURNSTILE_SECRET_KEY = platform.env.TURNSTILE_SECRET_KEY;
+
+		let validateTurnstileRequest = {
+			secret: TURNSTILE_SECRET_KEY,
+			response: turnstileToken,
+			remoteIp: getClientAddress(),
+			idempotency_key: crypto.randomUUID()
+		};
+
+		console.log(validateTurnstileRequest);
+
+		try {
+			const response = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(validateTurnstileRequest)
+			});
+
+			const result = await response.json();
+			if (!result.success) {
+				errors.turnstileValidationError = 'Turnstile validation failed';
+			}
+			console.log(result);
+		} catch (error) {
+			console.error('Turnstile validation error:', error);
+			errors.turnstileValidationError = 'Turnstile validation failed';
+		}
 
 		const RESEND_API_KEY = platform.env.RESEND_API_KEY;
 

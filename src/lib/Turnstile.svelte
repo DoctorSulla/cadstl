@@ -7,6 +7,11 @@
 
 	let { successCallback, errorCallback } = $props();
 
+	// Test
+	//const siteKey = '1x00000000000000000000AA';
+	// Prod
+	const siteKey = '0x4AAAAAAB54ltaa360QwppJ';
+
 	let turnstileContainer: HTMLElement;
 	onMount(async () => {
 		let check = document.getElementById('cloudflare-turnstile-script');
@@ -20,7 +25,7 @@
 			script.onload = () => {
 				let options = {
 					theme: 'light',
-					sitekey: '0x4AAAAAAB54ltaa360QwppJ',
+					sitekey: siteKey,
 					callback: function (token: string) {
 						successCallback(token);
 					}
