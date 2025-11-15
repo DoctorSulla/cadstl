@@ -41,6 +41,33 @@
 	function handleCloudflareTokenError(error: string) {
 		errorMessage = 'You failed the Cloudflare Turnstile check. Please refresh and try again';
 	}
+
+	function handleFormSubmit() {
+		return async ({ result }: any) => {
+			if (result.type === 'failure' || result.type === 'error') {
+				// Update form state with errors
+				form = result.data || {};
+				errors = form.errors ?? {};
+				values = form.values ?? {};
+				errorMessage = form.success === false ? (form.error ?? null) : null;
+				successMessage = null;
+			} else if (result.type === 'success') {
+				// Handle success
+				form = result.data || {};
+				successMessage = form.message ?? null;
+				errorMessage = null;
+				errors = {};
+				values = {};
+				// Reset form after success
+				setTimeout(() => {
+					const formElement = document.querySelector('form');
+					if (formElement) formElement.reset();
+					cfToken = '';
+					formDisabled = true;
+				}, 0);
+			}
+		};
+	}
 </script>
 
 <div class="mx-auto max-w-2xl p-6">
@@ -64,7 +91,11 @@
 		</p>
 	{/if}
 
-	<form method="post" use:enhance class="space-y-6 rounded-lg bg-white p-8 shadow-lg">
+	<form
+		method="post"
+		use:enhance={handleFormSubmit()}
+		class="space-y-6 rounded-lg bg-white p-8 shadow-lg"
+	>
 		<div>
 			<label for="fromName" class="mukta-regular mb-2 block text-sm font-medium text-gray-700"
 				>Your Name</label
