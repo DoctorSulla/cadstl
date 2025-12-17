@@ -55,7 +55,11 @@
 				show();
 			}}
 		>
-			<img class="m-auto" alt={photos[currentPhoto].caption} src={photos[currentPhoto].src} />
+			<img
+				class="m-auto max-h-dvh max-w-3xl"
+				alt={photos[currentPhoto].caption}
+				src={photos[currentPhoto].src}
+			/>
 			<p class="mb-3 text-center">
 				{photos[currentPhoto].caption}
 			</p>

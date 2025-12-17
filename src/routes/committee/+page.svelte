@@ -27,15 +27,15 @@
 			name: 'Joan Lythgoe',
 			role: 'Treasurer',
 			email: 'joanlythgoe45@hotmail.com',
-			homePhone: '01829 803977',
+			homePhone: '01829 830977',
 			mobilePhone: '07752722630'
 		},
 		{
-			name: 'Sue Long',
+			name: 'Manda Gillard',
 			role: 'Ladies League Rep',
-			email: 'suelong@hotmail.co.uk',
+			email: 'mandagillard@hotmail.com',
 			homePhone: '',
-			mobilePhone: '07846698264'
+			mobilePhone: '07742939442'
 		},
 		{
 			name: 'Pam Kloezeman',
@@ -45,9 +45,9 @@
 			mobilePhone: '07802296266'
 		},
 		{
-			name: 'Alan Hewitt',
+			name: 'Currently Vacant',
 			role: 'Mens League Rep',
-			email: 'eah6644@yahoo.com',
+			email: '',
 			mobilePhone: ''
 		}
 	];
