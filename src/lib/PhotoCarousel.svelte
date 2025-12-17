@@ -79,6 +79,6 @@
 
 <style>
 	img {
-		height: 70dvh;
+		max-height: 70dvh;
 	}
 </style>
