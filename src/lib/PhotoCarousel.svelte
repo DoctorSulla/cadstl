@@ -56,7 +56,7 @@
 			}}
 		>
 			<img
-				class="m-auto max-h-dvh max-w-3xl"
+				class="m-auto max-h-screen max-w-3xl"
 				alt={photos[currentPhoto].caption}
 				src={photos[currentPhoto].src}
 			/>
