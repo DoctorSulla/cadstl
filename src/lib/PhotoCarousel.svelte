@@ -56,7 +56,7 @@
 			}}
 		>
 			<img
-				class="m-auto max-w-3xl"
+				class="m-auto max-h-[70dvh] max-w-3xl"
 				alt={photos[currentPhoto].caption}
 				src={photos[currentPhoto].src}
 			/>
@@ -76,9 +76,3 @@
 		>
 	</div>
 </div>
-
-<style>
-	img {
-		max-height: 70dvh;
-	}
-</style>
