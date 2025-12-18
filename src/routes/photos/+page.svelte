@@ -6,7 +6,8 @@
 		{ src: '/photos/2025/Heswall-mixed-division3.jpg', caption: 'Mixed Division 3 - Heswall' },
 		{ src: '/photos/2025/HolliesB-mens-division2.jpg', caption: "Men's Division 2 - Hollies" },
 		{ src: '/photos/2025/Tarvin-Ladies-division3.jpg', caption: 'Ladies Division 3 - Tarvin' },
-		{ src: '/photos/2025/Wrexham-Ladies-division1.jpg', caption: 'Ladies Division 1 - Wrexham' }
+		{ src: '/photos/2025/Wrexham-Ladies-division1.jpg', caption: 'Ladies Division 1 - Wrexham' },
+		{ src: '/photos/2025/Heswall-Mens-Vets.jpg', caption: "Vet's Division - Heswall" }
 	];
 </script>
 
