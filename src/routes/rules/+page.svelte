@@ -3,7 +3,12 @@
 		<h1 class="mb-6 text-center text-2xl font-bold text-gray-800">
 			CHESTER AND DISTRICT TENNIS LEAGUE
 		</h1>
-		<h2 class="mb-8 text-center text-xl font-semibold text-gray-700">STRUCTURE & RULES</h2>
+		<h2 class="mb-8 text-center text-xl font-semibold text-gray-700">
+			STRUCTURE & RULES (December 2025) <a
+				class="text-blue-700 underline hover:text-blue-900"
+				href="/rules/rules_december_2025.pdf">Download as PDF</a
+			>
+		</h2>
 		<p class="mb-10 text-center text-gray-500">
 			Please read the following rules carefully to ensure fair play and the smooth running of the
 			league.

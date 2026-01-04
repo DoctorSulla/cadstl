@@ -1,65 +1,28 @@
 <p class="mt-2">
-	Below are the provisional minutes for the 2024 AGM. (To be confirmed at the 2025 AGM)
+	Below are the provisional minutes for the 2025 AGM. (To be confirmed at the 2026 AGM)
 </p>
 <div class="mt-6 flex justify-evenly">
-	<a href="/agm_minutes/agm_minutes_2024.pdf">
+	<a href="/agm_minutes/agm_minutes_2025.pdf">
 		<div class="text-center">
-			<i class="fa-solid fa-file-pdf text-8xl text-red-500"></i>
+			<i class="fa-solid fa-file-pdf text-6xl text-red-500"></i>
 			<br />
-			2024 AGM Minutes
+			2025 AGM Minutes
 		</div>
 	</a>
 </div>
 
-<p>Historic AGM minutes are available for download below:</p>
+<p class="mt-8 mb-4 text-lg font-semibold">Historic AGM Minutes</p>
 
-<ul class="mt-4 ml-8 list-disc">
-	<li class="my-2">
-		<a href="/agm_minutes/agm_minutes_2023.pdf"
-			>2023 AGM Minutes
-			<i class="fa-solid fa-file-pdf ml-2 text-2xl"></i>
+<div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+	{#each [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016] as year}
+		<a
+			href="/agm_minutes/agm_minutes_{year}.pdf"
+			class="group flex flex-col items-center rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition-all hover:border-red-300 hover:shadow-md"
+		>
+			<i
+				class="fa-solid fa-file-pdf text-5xl text-red-500 transition-transform group-hover:scale-110"
+			></i>
+			<span class="mt-2 text-sm font-medium text-gray-700 group-hover:text-red-600">{year}</span>
 		</a>
-	</li>
-	<li class="my-2">
-		<a href="/agm_minutes/agm_minutes_2022.pdf"
-			>2022 AGM Minutes
-			<i class="fa-solid fa-file-pdf ml-2 text-2xl"></i>
-		</a>
-	</li>
-	<li class="my-2">
-		<a href="/agm_minutes/agm_minutes_2021.pdf"
-			>2021 AGM Minutes
-			<i class="fa-solid fa-file-pdf ml-2 text-2xl"></i>
-		</a>
-	</li>
-	<li class="my-2">
-		<a href="/agm_minutes/agm_minutes_2020.pdf"
-			>2020 AGM Minutes
-			<i class="fa-solid fa-file-pdf ml-2 text-2xl"></i>
-		</a>
-	</li>
-	<li class="my-2">
-		<a href="/agm_minutes/agm_minutes_2019.pdf"
-			>2019 AGM Minutes
-			<i class="fa-solid fa-file-pdf ml-2 text-2xl"></i>
-		</a>
-	</li>
-	<li class="my-2">
-		<a href="/agm_minutes/agm_minutes_2018.pdf"
-			>2018 AGM Minutes
-			<i class="fa-solid fa-file-pdf ml-2 text-2xl"></i>
-		</a>
-	</li>
-	<li class="my-2">
-		<a href="/agm_minutes/agm_minutes_2017.pdf"
-			>2017 AGM Minutes
-			<i class="fa-solid fa-file-pdf ml-2 text-2xl"></i>
-		</a>
-	</li>
-	<li class="my-2">
-		<a href="/agm_minutes/agm_minutes_2016.pdf"
-			>2016 AGM Minutes
-			<i class="fa-solid fa-file-pdf ml-2 text-2xl"></i>
-		</a>
-	</li>
-</ul>
+	{/each}
+</div>

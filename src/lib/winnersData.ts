@@ -8,6 +8,8 @@ export interface WinnersCategory {
 	ladies: WinnerEntry[];
 	mixed: WinnerEntry[];
 	mens: WinnerEntry[];
+	vets: WinnerEntry[];
+	ladiesMini: WinnerEntry[];
 }
 
 export const winnersData: WinnersCategory = {
@@ -420,5 +422,11 @@ export const winnersData: WinnersCategory = {
 		{ year: 2014, division: 'Division 4 (Keith Wells Trophy)', winner: 'Wrexham D' },
 		{ year: 2015, division: 'Division 4 (Keith Wells Trophy)', winner: 'Old Hall' },
 		{ year: 2016, division: 'Division 4 (Keith Wells Trophy)', winner: 'Tarvin B' }
-	]
+	],
+	vets: [
+		{ year: 2023, division: 'Division 1', winner: 'Heswall' },
+		{ year: 2024, division: 'Division 1', winner: 'Heswall' },
+		{ year: 2025, division: 'Division 1', winner: 'Heswall' }
+	],
+	ladiesMini: [{ year: 2025, division: 'Division 1', winner: 'Neston' }]
 };

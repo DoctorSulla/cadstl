@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { winnersData, type WinnerEntry } from './winnersData';
 
-	type CategoryType = 'ladies' | 'mixed' | 'mens';
+	type CategoryType = 'ladies' | 'mixed' | 'mens' | 'vets' | 'ladiesMini';
 
 	let selectedCategory: CategoryType = 'ladies';
 	let sectionRefs: Record<string, HTMLElement> = {};
@@ -39,8 +39,10 @@
 				class="rounded border border-gray-300 bg-white px-4 py-2 text-lg shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
 			>
 				<option value="ladies">Ladies</option>
+				<option value="ladiesMini">Ladies Mini League</option>
 				<option value="mixed">Mixed</option>
 				<option value="mens">Mens</option>
+				<option value="vets">Mens Veterans</option>
 			</select>
 		</div>
 	</div>
