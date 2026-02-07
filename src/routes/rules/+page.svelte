@@ -39,7 +39,7 @@
 				The League shall be open to teams in the district, subject to acceptance by the Committee.
 			</li>
 			<li>
-				The League shall have four Sections, Men's Womens, Mixed and Men's Veterans.
+				The League shall have four Sections, Men's Women's, Mixed and Men's Veterans.
 				<ol class="mt-3 list-outside list-[lower-alpha] space-y-2 pl-6">
 					<li>
 						The Men's Veterans Section will be for players aged 55 in the season calendar year, or
