@@ -3,16 +3,31 @@
 		<h1 class="mb-6 text-center text-2xl font-bold text-gray-800">
 			CHESTER AND DISTRICT TENNIS LEAGUE
 		</h1>
-		<h2 class="mb-8 text-center text-xl font-semibold text-gray-700">
-			STRUCTURE & RULES (December 2025) <a
-				class="text-blue-700 underline hover:text-blue-900"
-				href="/rules/rules_december_2025.pdf">Download as PDF</a
+		<h2 class="mb-2 text-center text-xl font-semibold text-gray-700">STRUCTURE & RULES</h2>
+		<p class="mb-6 text-center text-gray-500">2026 season</p>
+		<div class="mb-10 text-center">
+			<a
+				href="/rules.pdf"
+				download
+				class="inline-flex items-center gap-2 rounded-lg bg-green-700 px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-green-800"
 			>
-		</h2>
-		<p class="mb-10 text-center text-gray-500">
-			Please read the following rules carefully to ensure fair play and the smooth running of the
-			league.
-		</p>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-4 w-4"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					stroke-width="2"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+					/>
+				</svg>
+				Download PDF
+			</a>
+		</div>
 
 		<ol class="list-outside list-decimal space-y-5 pl-5 leading-relaxed text-gray-700">
 			<li>
@@ -24,7 +39,7 @@
 				The League shall be open to teams in the district, subject to acceptance by the Committee.
 			</li>
 			<li>
-				The League shall have four Sections, Men's, Ladies, Mixed and Men's Veterans.
+				The League shall have four Sections, Men's Womens, Mixed and Men's Veterans.
 				<ol class="mt-3 list-outside list-[lower-alpha] space-y-2 pl-6">
 					<li>
 						The Men's Veterans Section will be for players aged 55 in the season calendar year, or
@@ -49,7 +64,7 @@
 				<ul class="mt-3 list-outside list-disc space-y-2 pl-6">
 					<li>Men's Divisions - 4 men players</li>
 					<li>Mixed Divisions - 2 women and 2 men</li>
-					<li>Ladies Divisions - 4 women players</li>
+					<li>Womens Divisions - 4 women players</li>
 				</ul>
 			</li>
 			<li>
@@ -114,8 +129,8 @@
 						recorded as all sets 6-0 to the non-defaulting team
 					</li>
 					<li>
-						The non defaulting captain should enter the result on the on-line system and MUST inform
-						the League organiser within 48 hours, including the reason for default
+						The non defaulting captain should enter the result on the on-line system and must inform
+						the League organiser within 48 hours, including the reason for default.
 					</li>
 					<li>The defaulting team will have 8 points deducted in addition to the loss of match</li>
 				</ol>
@@ -126,7 +141,7 @@
 					<li>
 						The defaulting Captain must notify the League organiser promptly to seek dispensation in
 						exceptional circumstances; rescheduling requires agreement from the non-defaulting team
-						who should be copied in to any correspondence
+						who should be copied into any correspondence
 					</li>
 					<li>
 						If agreed, the home Captain must offer three alternative dates (excluding dates where
@@ -183,7 +198,7 @@
 						Weekend matches to commence at the starting time stated in the fixture list issued at
 						the beginning of each season
 					</li>
-					<li>No matches on a Saturday evening</li>
+					<li>No matches on a Saturday evening.</li>
 					<li>
 						Any players not arriving within 30 minutes of the start time shall forfeit their first
 						rubber. For the non-arrival of a player within a further 30 minutes, the offending team
@@ -222,7 +237,7 @@
 			</li>
 			<li>
 				Teas are not required from the home club (unless agreed in advance by both Captains), though
-				normal hospitality from the home club is expected.
+				normal hospitality from the home club is expected
 			</li>
 
 			<li class="mt-8 font-semibold text-gray-800">Administration</li>
@@ -257,7 +272,10 @@
 				clubs.
 				<ol class="mt-3 list-outside list-[lower-alpha] space-y-2 pl-6">
 					<li>Each club represented is entitled to one vote</li>
-					<li>The Chairperson is entitled to a casting vote</li>
+					<li>
+						A majority vote is if the number of positive votes exceeds the number of negative votes
+					</li>
+					<li>If a tie the Chairperson is entitled to a casting vote</li>
 				</ol>
 			</li>
 			<li>
@@ -270,5 +288,7 @@
 				final.
 			</li>
 		</ol>
+
+		<p class="mt-10 text-center text-sm text-gray-400">Updated January 2026</p>
 	</div>
 </main>
