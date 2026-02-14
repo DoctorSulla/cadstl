@@ -40,7 +40,7 @@
 		{
 			name: 'Pam Kloezeman',
 			role: 'Mixed League Rep',
-			email: 'pamkloezeman@gmail.com',
+			email: 'pamkloezeman@yahoo.com',
 			homePhone: '',
 			mobilePhone: '07802296266'
 		},
