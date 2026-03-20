@@ -20,7 +20,6 @@
 			name: 'Kate Goldthorpe',
 			role: 'Secretary',
 			email: 'kmgoldthorpe@gmail.com',
-			homePhone: '01244 336479',
 			mobilePhone: '07598284987'
 		},
 		{
@@ -32,7 +31,7 @@
 		},
 		{
 			name: 'Manda Gillard',
-			role: 'Ladies League Rep',
+			role: "Women's League Rep",
 			email: 'mandagillard@hotmail.com',
 			homePhone: '',
 			mobilePhone: '07742939442'
@@ -46,7 +45,7 @@
 		},
 		{
 			name: 'Currently Vacant',
-			role: 'Mens League Rep',
+			role: "Men's League Rep",
 			email: '',
 			mobilePhone: ''
 		}
