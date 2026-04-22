@@ -43,10 +43,10 @@
 </p>
 
 <p class="my-5 text-xl">
-	This website has all the latest information concerning the 2025 season, including:
+	This website has all the latest information concerning the 2026 season, including:
 </p>
 <ul class="mt-2 mb-10 list-disc text-xl">
-	<li class="ml-4"><i class="fa-solid fa-calendar-days"></i> 2025 fixtures and teams</li>
+	<li class="ml-4"><i class="fa-solid fa-calendar-days"></i> 2026 fixtures and teams</li>
 	<li class="ml-4"><i class="fa-solid fa-medal"></i> The latest league tables</li>
 	<li class="ml-4"><i class="fa-solid fa-scale-balanced"></i> The league rules</li>
 	<li class="ml-4"><i class="fa-solid fa-note"></i> AGM minutes</li>
