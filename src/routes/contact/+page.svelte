@@ -41,7 +41,7 @@
 
 	function handleCloudflareToken(token: string) {
 		cfToken = token;
-		formDisabled = false;
+		//formDisabled = false;
 	}
 
 	function handleCloudflareTokenError(error: string) {
@@ -51,6 +51,10 @@
 </script>
 
 <div class="mx-auto max-w-2xl p-6">
+	<p class="mb-6 rounded-lg border border-red-200 bg-red-50 p-4 text-center text-red-700">
+		The contact form has been disabled. If you have an enquiry or issue please contact the relevant
+		committee member.
+	</p>
 	{#if successMessage}
 		<p class="mb-6 rounded-lg border border-green-200 bg-green-50 p-4 text-center text-green-700">
 			{successMessage}

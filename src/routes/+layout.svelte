@@ -15,8 +15,7 @@
 		'/photos': 'Photos',
 		'/agmminutes': 'AGM Minutes',
 		'/leaguetables': 'League Tables',
-		'/previouswinners': 'Previous Winners',
-		'/contact': 'Contact Us'
+		'/previouswinners': 'Previous Winners'
 	};
 
 	let title: string = $derived.by(() => {
