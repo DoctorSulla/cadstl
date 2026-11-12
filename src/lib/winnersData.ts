@@ -57,6 +57,7 @@ export const winnersData: WinnersCategory = {
 		{ year: 2023, division: 'Division 1', winner: 'Wrexham' },
 		{ year: 2024, division: 'Division 1', winner: 'Wrexham' },
 		{ year: 2025, division: 'Division 1', winner: 'Wrexham' },
+		{ year: 2026, division: 'Division 1', winner: 'Wrexham' },
 		// Division 2
 		{ year: 1986, division: 'Division 2', winner: 'Helsby' },
 		{ year: 1987, division: 'Division 2', winner: 'Frodsham' },
@@ -97,6 +98,7 @@ export const winnersData: WinnersCategory = {
 		{ year: 2023, division: 'Division 2', winner: 'Hollies A' },
 		{ year: 2024, division: 'Division 2', winner: 'Chester A' },
 		{ year: 2025, division: 'Division 2', winner: 'Helsby A' },
+		{ year: 2026, division: 'Division 2', winner: 'Hoole A' },
 		// Division 3
 		{ year: 2000, division: 'Division 3', winner: 'Cheshire Oaks B' },
 		{ year: 2001, division: 'Division 3', winner: 'Wrexham' },
@@ -122,7 +124,8 @@ export const winnersData: WinnersCategory = {
 		{ year: 2022, division: 'Division 3', winner: 'Thornton Hough' },
 		{ year: 2023, division: 'Division 3', winner: 'Overton' },
 		{ year: 2024, division: 'Division 3', winner: 'Malpas' },
-		{ year: 2025, division: 'Division 3', winner: 'Tarvin' }
+		{ year: 2025, division: 'Division 3', winner: 'Tarvin' },
+		{ year: 2026, division: 'Division 3', winner: 'Thornton Hough' },
 	],
 	mixed: [
 		// Division 1
@@ -171,6 +174,7 @@ export const winnersData: WinnersCategory = {
 		{ year: 2023, division: 'Division 1', winner: 'Hoole A' },
 		{ year: 2024, division: 'Division 1', winner: 'Hoole A' },
 		{ year: 2025, division: 'Division 1', winner: 'Hoole A' },
+		{ year: 2026, division: 'Division 1', winner: 'Wrexham A' },
 		// Division 2
 		{ year: 1981, division: 'Division 2', winner: 'Tarvin B Upton' },
 		{ year: 1982, division: 'Division 2', winner: 'Hooton B' },
@@ -216,6 +220,7 @@ export const winnersData: WinnersCategory = {
 		{ year: 2023, division: 'Division 2', winner: 'Hoole B' },
 		{ year: 2024, division: 'Division 2', winner: 'Cheshire Oaks A' },
 		{ year: 2025, division: 'Division 2', winner: 'Hoole B' },
+		{ year: 2026, division: 'Division 2', winner: 'Wrexham B' },
 		// Division 3
 		{ year: 1986, division: 'Division 3', winner: 'Helsby B' },
 		{ year: 1987, division: 'Division 3', winner: 'Hoole' },
@@ -256,6 +261,8 @@ export const winnersData: WinnersCategory = {
 		{ year: 2023, division: 'Division 3', winner: 'Wrexham C' },
 		{ year: 2024, division: 'Division 3', winner: 'Hooton' },
 		{ year: 2025, division: 'Division 3', winner: 'Heswall' },
+		{ year: 2026, division: 'Division 3', winner: 'Hooton' },
+
 		// Division 4
 		{ year: 2003, division: 'Division 4', winner: 'Hollies' },
 		{ year: 2004, division: 'Division 4', winner: 'Cheshire Oaks B' },
@@ -318,6 +325,7 @@ export const winnersData: WinnersCategory = {
 		{ year: 2023, division: 'Division 1', winner: 'Hoylake' },
 		{ year: 2024, division: 'Division 1', winner: 'Hoole A' },
 		{ year: 2025, division: 'Division 1', winner: 'Hoole A' },
+		{ year: 2026, division: 'Division 1', winner: 'Hoylake' },
 		// Division 2
 		{ year: 1981, division: 'Division 2', winner: 'Heswall B' },
 		{ year: 1982, division: 'Division 2', winner: 'Hoole B' },
@@ -363,6 +371,7 @@ export const winnersData: WinnersCategory = {
 		{ year: 2023, division: 'Division 2', winner: 'Chester A' },
 		{ year: 2024, division: 'Division 2', winner: 'Hoole B' },
 		{ year: 2025, division: 'Division 2', winner: 'Hollies B' },
+		{ year: 2026, division: 'Division 2', winner: 'Hool B' },
 		// Division 3
 		{ year: 1984, division: 'Division 3', winner: 'Hooton' },
 		{ year: 1985, division: 'Division 3', winner: 'Tarvin' },
@@ -405,6 +414,7 @@ export const winnersData: WinnersCategory = {
 		{ year: 2023, division: 'Division 3', winner: 'Wrexham C' },
 		{ year: 2024, division: 'Division 3', winner: 'Cheshire Oaks' },
 		{ year: 2025, division: 'Division 3', winner: 'Glan Aber B' },
+		{ year: 2026, division: 'Division 3', winner: 'Mold' },
 		// Division 4 - Keith Wells Trophy
 		{ year: 2001, division: 'Division 4 (Keith Wells Trophy)', winner: 'Cheshire Oaks B' },
 		{ year: 2002, division: 'Division 4 (Keith Wells Trophy)', winner: 'Cheshire Oaks C' },
@@ -426,7 +436,8 @@ export const winnersData: WinnersCategory = {
 	vets: [
 		{ year: 2023, division: 'Division 1', winner: 'Heswall' },
 		{ year: 2024, division: 'Division 1', winner: 'Heswall' },
-		{ year: 2025, division: 'Division 1', winner: 'Heswall' }
+		{ year: 2025, division: 'Division 1', winner: 'Heswall' },
+		{ year: 2026, division: 'Division 1', winner: 'Wrexham' }
 	],
 	ladiesMini: [{ year: 2025, division: 'Division 1', winner: 'Neston' }]
 };
