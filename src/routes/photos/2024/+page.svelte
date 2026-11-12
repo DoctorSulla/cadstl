@@ -17,7 +17,13 @@
 		<link rel="preload" as="image" href={photo.src} />
 	{/each}
 </svelte:head>
-<p class="mb-3">Below are some photos from the 2024 presentation evening:</p>
+<p class="mb-3">
+	Below are some photos from the 2024 presentation evening. You can see the 2026 photos <a
+		class="text-blue-500 hover:underline"
+		href="/photos">here.</a
+	>
+	or the 2025 photos <a class="text-blue-500 hover:underline" href="/photos/2025">here.</a>
+</p>
 <div class="mt-2">
 	<PhotoCarousel {photos} />
 </div>

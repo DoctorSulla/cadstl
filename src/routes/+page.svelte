@@ -38,15 +38,15 @@
 	but have teams across the Wirral, North Wales, and Shropshire. If you are interested in joining
 	the league please fill out a <a
 		class="text-blue-700 underline hover:text-blue-900"
-		href="/cadstl_registration_form_2025.doc">registration form <i class="fas fa-file-word"></i></a
+		href="/cadstl_registration_form_2027.doc">registration form <i class="fas fa-file-word"></i></a
 	>.
 </p>
 
 <p class="my-5 text-xl">
-	This website has all the latest information concerning the 2026 season, including:
+	This website has all the latest information concerning the 2027 season, including:
 </p>
 <ul class="mt-2 mb-10 list-disc text-xl">
-	<li class="ml-4"><i class="fa-solid fa-calendar-days"></i> 2026 fixtures and teams</li>
+	<li class="ml-4"><i class="fa-solid fa-calendar-days"></i> 2027 fixtures and teams</li>
 	<li class="ml-4"><i class="fa-solid fa-medal"></i> The latest league tables</li>
 	<li class="ml-4"><i class="fa-solid fa-scale-balanced"></i> The league rules</li>
 	<li class="ml-4"><i class="fa-solid fa-note"></i> AGM minutes</li>

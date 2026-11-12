@@ -44,10 +44,22 @@
 			mobilePhone: '07802296266'
 		},
 		{
-			name: 'Currently Vacant',
+			name: 'Tom Evans',
 			role: "Men's League Rep",
-			email: '',
-			mobilePhone: ''
+			email: 'thomas.evansessex@btinternet.com',
+			mobilePhone: '07765335018'
+		},
+		{
+			name: 'Kate Buckeridge',
+			role: 'TBC',
+			email: 'katharinebuckeridge@hotmail.com',
+			mobilePhone: '07855837997'
+		},
+		{
+			name: 'Carmen Dowd',
+			role: 'TBC',
+			email: 'CarmenJLDowd@outlook.com',
+			mobilePhone: '07879118767'
 		}
 	];
 </script>
