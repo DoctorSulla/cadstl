@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { winnersData, type WinnerEntry } from './winnersData';
 
-	type CategoryType = 'ladies' | 'mixed' | 'mens' | 'vets' | 'ladiesMini';
+	type CategoryType = 'women' | 'mixed' | 'mens' | 'vets' | 'womenMini';
 
-	let selectedCategory: CategoryType = 'ladies';
+	let selectedCategory: CategoryType = 'women';
 	let sectionRefs: Record<string, HTMLElement> = {};
 
 	$: sortedWinners = [...winnersData[selectedCategory]].sort((a, b) => b.year - a.year);
@@ -38,8 +38,8 @@
 				bind:value={selectedCategory}
 				class="rounded border border-gray-300 bg-white px-4 py-2 text-lg shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
 			>
-				<option value="ladies">Ladies</option>
-				<option value="ladiesMini">Ladies Mini League</option>
+				<option value="women">Women</option>
+				<option value="womenMini">Women Mini League</option>
 				<option value="mixed">Mixed</option>
 				<option value="mens">Mens</option>
 				<option value="vets">Mens Veterans</option>

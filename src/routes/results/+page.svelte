@@ -110,12 +110,12 @@
 		</div>
 	</a>
 
-	<a href="/scorecards/ladies_scorecard.xls">
+	<a href="/scorecards/womens_scorecard.xls">
 		<div class="text-center">
 			<i class="fa-solid fa-file-excel text-8xl text-green-500"></i>
 
 			<br />
-			Ladies Scorecard
+			Women's Scorecard
 		</div>
 	</a>
 
@@ -133,7 +133,7 @@
 			<i class="fa-solid fa-file-excel text-8xl text-green-500"></i>
 
 			<br />
-			Mens Scorecard
+			Men's Scorecard
 		</div>
 	</a>
 </div>

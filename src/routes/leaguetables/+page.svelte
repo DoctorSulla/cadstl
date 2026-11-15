@@ -52,7 +52,7 @@
 
 	const leagueOptions: { value: keyof Divisions; label: string }[] = [
 		{ value: 'mens', label: 'Mens' },
-		{ value: 'ladies', label: 'Ladies' },
+		{ value: 'ladies', label: 'Womens' },
 		{ value: 'mixed', label: 'Mixed' },
 		{ value: 'vets', label: 'Veterans' }
 	];

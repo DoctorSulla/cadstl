@@ -5,15 +5,15 @@ export interface WinnerEntry {
 }
 
 export interface WinnersCategory {
-	ladies: WinnerEntry[];
+	women: WinnerEntry[];
 	mixed: WinnerEntry[];
 	mens: WinnerEntry[];
 	vets: WinnerEntry[];
-	ladiesMini: WinnerEntry[];
+	womenMini: WinnerEntry[];
 }
 
 export const winnersData: WinnersCategory = {
-	ladies: [
+	women: [
 		// Division 1 - Chris Cable Trophy
 		{ year: 1983, division: 'Division 1', winner: 'Hooton A' },
 		{ year: 1984, division: 'Division 1', winner: 'Helsby' },
@@ -441,5 +441,5 @@ export const winnersData: WinnersCategory = {
 		{ year: 2025, division: 'Division 1', winner: 'Heswall' },
 		{ year: 2026, division: 'Division 1', winner: 'Wrexham' }
 	],
-	ladiesMini: [{ year: 2025, division: 'Division 1', winner: 'Neston' }]
+	womenMini: [{ year: 2025, division: 'Division 1', winner: 'Neston' }]
 };

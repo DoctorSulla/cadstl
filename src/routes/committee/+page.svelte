@@ -19,7 +19,7 @@
 		{
 			name: 'Kate Goldthorpe',
 			role: 'Secretary',
-			email: 'kmgoldthorpe@gmail.com',
+			email: 'tenniskgold@gmail.com',
 			mobilePhone: '07598284987'
 		},
 		{
@@ -39,7 +39,7 @@
 		{
 			name: 'Pam Kloezeman',
 			role: 'Mixed League Rep',
-			email: 'pamkloezeman@yahoo.com',
+			email: 'supply-chain@hotmail.co.uk',
 			homePhone: '',
 			mobilePhone: '07802296266'
 		},
