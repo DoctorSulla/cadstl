@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Dropdown from '$lib/Dropdown.svelte';
 	import LoadingSpinner from '$lib/LoadingSpinner.svelte';
 
 	interface LeagueTable {
@@ -49,9 +50,19 @@
 		vets: [{ id: 1, name: 'Division 1' }]
 	};
 
-	let leagueType = $state('mens');
+	const leagueOptions: { value: keyof Divisions; label: string }[] = [
+		{ value: 'mens', label: 'Mens' },
+		{ value: 'ladies', label: 'Ladies' },
+		{ value: 'mixed', label: 'Mixed' },
+		{ value: 'vets', label: 'Veterans' }
+	];
+
+	let leagueType: keyof Divisions = $state('mens');
 	let division = $state(1);
 	let availableDivisions = $derived(divisions[leagueType]);
+	let divisionOptions = $derived(
+		availableDivisions.map((div) => ({ value: div.id, label: div.name }))
+	);
 	let response: LeagueTable | null = $state(null);
 
 	let loading = $state(true);
@@ -62,6 +73,13 @@
 		let request = await fetch(url);
 		response = await request.json();
 		loading = false;
+	}
+
+	function handleLeagueTypeChange() {
+		if (!availableDivisions.some((d) => d.id === division)) {
+			division = availableDivisions[0].id;
+		}
+		getLeagueTable();
 	}
 
 	getLeagueTable();
@@ -82,18 +100,19 @@
 		href="https://bowlsresults.co.uk/resultstennis/chestertennis/index.php">Bowls Results</a
 	>.
 </p>
-<form>
-	<select class="border border-blue-300" onchange={getLeagueTable} bind:value={leagueType}>
-		<option value="mens">Mens</option>
-		<option value="ladies">Ladies</option>
-		<option value="mixed">Mixed</option>
-		<option value="vets">Veterans</option>
-	</select>
-	<select class="border border-blue-300" onchange={getLeagueTable} bind:value={division}>
-		{#each availableDivisions as div}
-			<option value={div.id}>{div.name}</option>
-		{/each}
-	</select>
+<form class="flex flex-wrap gap-2">
+	<Dropdown
+		options={leagueOptions}
+		bind:value={leagueType}
+		onchange={handleLeagueTypeChange}
+		ariaLabel="League type"
+	/>
+	<Dropdown
+		options={divisionOptions}
+		bind:value={division}
+		onchange={getLeagueTable}
+		ariaLabel="Division"
+	/>
 </form>
 
 <LoadingSpinner {loading} />
