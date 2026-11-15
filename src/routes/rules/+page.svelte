@@ -3,8 +3,7 @@
 		<h1 class="mb-6 text-center text-2xl font-bold text-gray-800">
 			CHESTER AND DISTRICT TENNIS LEAGUE
 		</h1>
-		<h2 class="mb-2 text-center text-xl font-semibold text-gray-700">STRUCTURE & RULES</h2>
-		<p class="mb-6 text-center text-gray-500">2026 season</p>
+		<h2 class="mb-6 text-center text-xl font-semibold text-gray-700">STRUCTURE & RULES</h2>
 		<div class="mb-10 text-center">
 			<a
 				href="/rules.pdf"
@@ -39,7 +38,7 @@
 				The League shall be open to teams in the district, subject to acceptance by the Committee.
 			</li>
 			<li>
-				The League shall have four Sections; Men's, Women's, Mixed, and Men's Veterans.
+				The League shall have four Sections, Men's, Women's, Mixed and Men's Veterans.
 				<ol class="mt-3 list-outside list-[lower-alpha] space-y-2 pl-6">
 					<li>
 						The Men's Veterans Section will be for players aged 55 in the season calendar year, or
@@ -80,6 +79,10 @@
 			<li>
 				For Clubs with more than one team in any of the Sections, any player having played on three
 				occasions for any higher team, may not play subsequently for a lower team.
+			</li>
+			<li>
+				In the veterans section a team can have a 5th player for the second rubber. The captain of
+				the team with a 5th player must inform the opposition captain prior to the match.
 			</li>
 
 			<li class="mt-8 font-semibold text-gray-800">Match Scheduling, Format and Scoring</li>
@@ -139,19 +142,26 @@
 				Exceptional circumstances
 				<ol class="mt-3 list-outside list-[lower-alpha] space-y-2 pl-6">
 					<li>
-						The defaulting Captain must notify the League organiser promptly to seek dispensation in
+						The defaulting Captain must notify the League Organiser promptly to seek dispensation in
 						exceptional circumstances; rescheduling requires agreement from the non-defaulting team
 						who should be copied into any correspondence
 					</li>
 					<li>
 						If agreed, the home Captain must offer three alternative dates (excluding dates where
-						the away team has another CADSTL fixture) and inform the League organiser of the agreed
+						the away team has another CADSTL fixture) and inform the League Organiser of the agreed
 						date as soon as confirmed
 					</li>
 					<li>Rearranged matches must be played as soon as possible</li>
 					<li>
 						If the postponement is in the first half of the season the match must be played before
 						the reverse fixture in the second half of the season
+					</li>
+					<li>
+						A team can fulfil a fixture using 2 players and the match completes 2 rubbers. The
+						defaulting team must contact the opposing captain and inform the relevant league
+						representative prior to the match taking place. A team can only do this twice. The
+						following instance will result in rule 19 being applied with the whole match conceded
+						and penalty points applied.
 					</li>
 				</ol>
 			</li>
@@ -232,7 +242,7 @@
 				should be for tennis.
 			</li>
 			<li>
-				If any team does not fulfil 75% of their matches by the end of August, all points from their
+				If any team does not fulfil 75% of their rubbers by the end of August, all points from their
 				fixtures will be void and the team relegated.
 			</li>
 			<li>
@@ -289,6 +299,6 @@
 			</li>
 		</ol>
 
-		<p class="mt-10 text-center text-sm text-gray-400">Updated January 2026</p>
+		<p class="mt-10 text-center text-sm text-gray-400">Updated December 2026</p>
 	</div>
 </main>
