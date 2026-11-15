@@ -127,7 +127,7 @@ export const winnersData: WinnersCategory = {
 		{ year: 2025, division: 'Division 3', winner: 'Tarvin' },
 		{ year: 2026, division: 'Division 3', winner: 'Thornton Hough' },
 		// Division 4
-		{ year: 2026, division: 'Division 4', winner: 'Neston' },
+		{ year: 2026, division: 'Division 4', winner: 'Neston' }
 	],
 	mixed: [
 		// Division 1
